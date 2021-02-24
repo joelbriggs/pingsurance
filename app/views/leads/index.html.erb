@@ -1,0 +1,21 @@
+
+<%= render 'add_lead', lead: @new_lead %>
+
+<table class="lead-table table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Date Texted</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @leads.each do |lead| %>
+        <tr>
+            <td><%= lead.display_full_name() %></td>
+            <td><%= lead.phone %></td>
+            <td><%= lead&.date_texted&.strftime('%m/%d/%Y') %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

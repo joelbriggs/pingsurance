@@ -1,0 +1,41 @@
+<!-- Modal -->
+<div class="modal fade" id="addLeadModal" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Add New Lead:</h5>
+        </div>
+        <%= form_for(@new_lead) do |f| %>
+        <div class="modal-body">
+                <div class="row mb-3">
+                    <%= f.label :first_name, class: "col-sm-2 col-form-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :first_name, class: "form-control", required: true %>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <%= f.label :last_name, class: "col-sm-2 col-form-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :last_name, class: "form-control", required: true %>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <%= f.label :phone, class: "col-sm-2 col-form-label" %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :phone, class: "form-control", required: true %>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <%= f.text_area :notes, rows: 8, class: "form-control", placeholder: 'Thank you for contacting us reguarding your insurance needs! Are you seeking coverage on yourself or someone else in your family?', required: true %>
+                    </div>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            <%= f.submit "Create & Send", class: "btn btn-primary" %>
+        </div>
+        <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="new-lead-wrapper">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addLeadModal">
+        <%= image_tag 'add_user.png' %> Add Lead
+    </button>
+</div>
+
+<%= render 'modal', lead: @new_lead %>

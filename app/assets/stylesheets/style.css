@@ -1,0 +1,35 @@
+.content-wrapper {
+    margin: 50px 100px;
+    position: relative;
+}
+
+.header {
+    color: initial;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.header:hover {
+    color: initial;
+}
+
+.new-lead-wrapper {
+    margin: 20px 0;
+}
+
+.new-lead-wrapper img {
+    padding-right: 15px;
+    width: 35px;
+}
+
+.content-wrapper .alert{
+    position: absolute;
+    top: 0;
+    left: 250px;
+}
+
+#clear-alert {
+    cursor: pointer;
+    padding-left: 50px;
+    text-decoration: underline;
+}
